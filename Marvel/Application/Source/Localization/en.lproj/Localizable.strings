@@ -1,0 +1,5 @@
+"error_message" = "Something Went Wrong.";
+"no_description" = "No Description Found";
+"parameter_missing" = "Request Parameters are not provided";
+"encoding_failed" = "Unable to encode the parameter";
+"url_missing" = "URL is not provided or invalid URL";

@@ -1,0 +1,38 @@
+name: Marvel
+options:
+  bundleIdPrefix: com.test.marvel
+  createIntermediateGroups: true
+  deploymentTarget:
+    iOS: 13.0
+targets:
+  Marvel:
+    type: application
+    platform: iOS
+    sources:
+      - path: Marvel
+    dependencies:
+      - package: Kingfisher
+      - package: JSONDecoder-Keypath
+    scheme:
+      testTargets:
+      - MarvelTests
+    configFiles:
+      Debug: Marvel/Config.xcconfig
+      Release: Marvel/Config.xcconfig
+  MarvelTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources:
+      - path: MarvelTests
+    dependencies:
+      - target: Marvel
+    configFiles:
+      Debug: Marvel/Config.xcconfig
+      Release: Marvel/Config.xcconfig
+packages:
+  Kingfisher:
+    url: https://github.com/onevcat/Kingfisher.git
+    majorVersion: 7.0.0
+  JSONDecoder-Keypath:
+    url: https://github.com/0111b/JSONDecoder-Keypath.git
+    majorVersion: 0.1.0
